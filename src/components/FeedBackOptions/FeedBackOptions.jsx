@@ -5,12 +5,12 @@ export const FeedBackOptions = ({options, onLeaveFeedBack}) => {
     return (
         <>
         {options.map((option) => (
-        <Button key={option} onClick={onLeaveFeedBack} name={option}>{option}</Button>))}
+        <Button key={option} onClick={() => onLeaveFeedBack(option)}>{option}</Button>))}
         </>
     )
 }
 
 FeedBackOptions.propTypes = {
-    options: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+    options: PropTypes.array.isRequired,
     onLeaveFeedBack: PropTypes.func.isRequired,
 }
