@@ -4,8 +4,6 @@ import { FeedBackOptions } from "./FeedBackOptions/FeedBackOptions";
 import { Statistics } from "./Statistics/Statistics";
 import { Notification } from "./Notification/Notification";
 
-
-
 export const App = () => {
   const [good, setGood] = useState(0);
   const [neutral, setNeutral] = useState(0);
@@ -31,11 +29,11 @@ export const App = () => {
     return good + neutral + bad;
   };
 
-const countPositiveFeedbackPercentage = () => {
+  const countPositiveFeedbackPercentage = () => {
     if (countTotalFeedBack() > 0) {
       return Math.floor((good / countTotalFeedBack()) * 100);
-    }
-  }
+    };
+  };
 
   return (
       <>
