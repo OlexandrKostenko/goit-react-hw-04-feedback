@@ -11,7 +11,7 @@ export const App = () => {
   const [neutral, setNeutral] = useState(0);
   const [bad, setBad] = useState(0);
 
-const onLeaveFeedBack = event => {
+  const onLeaveFeedBack = event => {
     switch (event) {
       case 'good':
         setGood(prev => prev + 1);
@@ -24,12 +24,12 @@ const onLeaveFeedBack = event => {
         break;
       default:
         console.log('Something was wrong :(')
-    }
-  }
+    };
+  };
 
-const countTotalFeedBack = () => {
+  const countTotalFeedBack = () => {
     return good + neutral + bad;
-  }
+  };
 
 const countPositiveFeedbackPercentage = () => {
     if (countTotalFeedBack() > 0) {
